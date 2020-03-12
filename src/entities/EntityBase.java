@@ -23,7 +23,7 @@ public abstract class EntityBase {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 67 * hash + this.id;
+        hash = 67 * hash + (this.id != null ? this.id : 0);
         return hash;
     }
 
