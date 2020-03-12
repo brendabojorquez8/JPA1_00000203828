@@ -40,7 +40,7 @@ public class JPATest {
         
         TypedQuery<Videogame> query = 
                 entityManager.createQuery(
-                    "SELECT v FROM Videogame v WHERE v.rating >= :rating", Videogame.class);
+                    "SELECT v FROM Videogame v WHERE v.rating > = :rating", Videogame.class);
         query.setParameter("rating", 4);
         List<Videogame> list = query.getResultList();
         
